@@ -4,7 +4,7 @@
                     <i data-lucide="menu" class="h-5 w-5"></i>
                 </button>
                 <div class="flex items-center space-x-4">
-                    <span class="text-sm text-muted-foreground">Bienvenido, {{ auth()->user()->name }}</span>
+                    <span class="text-sm text-muted-foreground">{{__('welcome')}}, {{ auth()->user()->name }}</span>
                     <form id="logout-form" action="{{ route('admin.logout') }}" method="POST" class="hidden">
                         @csrf
                     </form>
@@ -15,7 +15,7 @@
                         
                         <!--  Agregado selector de cuentas -->
                         <div class="flex items-center space-x-3">
-                            <label class="text-sm font-medium text-gray-700">Cuenta:</label>
+                            <label class="text-sm font-medium text-gray-700">{{__('account')}}:</label>
                             <select id="account-selector" class="border border-gray-300 rounded-lg px-3 py-2 text-sm focus:ring-2 focus:ring-blue-500 focus:border-transparent min-w-[200px]" onchange="changeAccount()">
                                 <option value="cuenta-principal">Cuenta Principal</option>
                                 <option value="cuenta-ahorros">Cuenta de Ahorros</option>
@@ -27,7 +27,7 @@
 
                     <button onclick="event.preventDefault(); document.getElementById('logout-form').submit();" class="hidden lg:flex items-center px-3 py-1 text-sm border border-gray-300 hover:bg-gray-50 rounded-md">
                         <i data-lucide="log-out" class="h-4 w-4 mr-2"></i>
-                        Cerrar Sesión
+                        {{__('logout')}}
                     </button>
                     <form id="logout-form" action="{{ route('admin.logout') }}" method="POST" class="hidden">
                         @csrf

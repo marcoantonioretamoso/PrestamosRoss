@@ -7,64 +7,64 @@
             <div id="dashboard-section" class="space-y-6">
                 <!-- Header -->
                 <div>
-                    <h1 class="text-3xl font-bold text-foreground">Dashboard</h1>
-                    <p class="text-muted-foreground">Resumen general de tu situación financiera</p>
+                    <h1 class="text-3xl font-bold text-foreground">{{__('dashboard')}}</h1>
+                    <p class="text-muted-foreground">{{__('financial_summary')}}</p>
                 </div>
 
                 <!-- Métricas principales -->
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                     <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
                         <div class="flex items-center justify-between mb-2">
-                            <h3 class="text-sm font-medium">Total Ingresos</h3>
+                            <h3 class="text-sm font-medium">{{__('total_income')}}</h3>
                             <i data-lucide="trending-up" class="h-4 w-4 text-chart-1"></i>
                         </div>
                         <div class="text-2xl font-bold text-chart-1">$45,000.00</div>
-                        <p class="text-xs text-muted-foreground">+12% desde el mes pasado</p>
+                        <p class="text-xs text-muted-foreground">+12% {{__('from_last_month')}}</p>
                     </div>
 
                     <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
                         <div class="flex items-center justify-between mb-2">
-                            <h3 class="text-sm font-medium">Total Egresos</h3>
+                            <h3 class="text-sm font-medium">{{__('total_expenses')}}</h3>
                             <i data-lucide="trending-down" class="h-4 w-4 text-chart-4"></i>
                         </div>
                         <div class="text-2xl font-bold text-chart-4">$28,000.00</div>
-                        <p class="text-xs text-muted-foreground">-5% desde el mes pasado</p>
+                        <p class="text-xs text-muted-foreground">-5% {{__('from_last_month')}}</p>
                     </div>
 
                     <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
                         <div class="flex items-center justify-between mb-2">
-                            <h3 class="text-sm font-medium">Préstamos Activos</h3>
+                            <h3 class="text-sm font-medium">{{__('active_loans')}}</h3>
                             <i data-lucide="credit-card" class="h-4 w-4 text-chart-2"></i>
                         </div>
                         <div class="text-2xl font-bold">3</div>
-                        <p class="text-xs text-muted-foreground">$15,000.00 pendientes</p>
+                        <p class="text-xs text-muted-foreground">$15,000.00 {{__('pending_amount')}}</p>
                     </div>
 
                     <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
                         <div class="flex items-center justify-between mb-2">
-                            <h3 class="text-sm font-medium">Balance General</h3>
+                            <h3 class="text-sm font-medium">{{__('general_balance')}}</h3>
                             <i data-lucide="dollar-sign" class="h-4 w-4 text-chart-3"></i>
                         </div>
                         <div class="text-2xl font-bold text-chart-3">$17,000.00</div>
-                        <p class="text-xs text-muted-foreground">Ingresos - Egresos</p>
+                        <p class="text-xs text-muted-foreground">{{__('income_minus_expenses')}}</p>
                     </div>
                 </div>
 
                 <!-- Acciones rápidas -->
                 <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
-                    <h3 class="text-lg font-semibold mb-4">Acciones Rápidas</h3>
+                    <h3 class="text-lg font-semibold mb-4">{{__('quick_actions')}}</h3>
                     <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
                         <button onclick="showSection('ingresos')" class="h-20 bg-blue-600 hover:bg-blue-700 text-white rounded-lg flex flex-col items-center justify-center space-y-2">
                             <i data-lucide="plus" class="h-6 w-6"></i>
-                            <span>Registrar Ingreso</span>
+                            <span>{{__('register_income')}}</span>
                         </button>
                         <button onclick="showSection('egresos')" class="h-20 border border-gray-300 hover:bg-gray-50 rounded-lg flex flex-col items-center justify-center space-y-2">
                             <i data-lucide="plus" class="h-6 w-6"></i>
-                            <span>Registrar Egreso</span>
+                            <span>{{__('register_expense')}}</span>
                         </button>
                         <button onclick="showSection('prestamos')" class="h-20 bg-gray-200 hover:bg-gray-300 rounded-lg flex flex-col items-center justify-center space-y-2">
                             <i data-lucide="eye" class="h-6 w-6"></i>
-                            <span>Ver Préstamos</span>
+                            <span>{{__('view_loans')}}</span>
                         </button>
                     </div>
                 </div>
@@ -74,17 +74,17 @@
                     <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
                         <h3 class="text-lg font-semibold mb-4 flex items-center">
                             <i data-lucide="trending-up" class="h-5 w-5 mr-2 text-chart-1"></i>
-                            Ingresos Recientes
+                            {{__('recent_income')}}
                         </h3>
                         <div class="space-y-4">
                             <div class="flex items-center justify-between">
                                 <div>
-                                    <p class="font-medium">Venta de productos</p>
+                                    <p class="font-medium">{{__('product_sales')}}</p>
                                     <p class="text-sm text-muted-foreground">2024-01-15</p>
                                 </div>
                                 <div class="text-chart-1 font-semibold">+$5,000.00</div>
                             </div>
-                            <div class="flex items-center justify-between">
+                            {{-- <div class="flex items-center justify-between">
                                 <div>
                                     <p class="font-medium">Servicios de consultoría</p>
                                     <p class="text-sm text-muted-foreground">2024-01-14</p>
@@ -97,17 +97,17 @@
                                     <p class="text-sm text-muted-foreground">2024-01-13</p>
                                 </div>
                                 <div class="text-chart-1 font-semibold">+$1,200.00</div>
-                            </div>
+                            </div> --}}
                         </div>
                         <button onclick="showSection('ingresos')" class="w-full mt-4 px-4 py-2 border border-gray-300 hover:bg-gray-50 rounded-md">
-                            Ver todos los ingresos
+                            {{__('view_all_income')}}
                         </button>
                     </div>
 
                     <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
                         <h3 class="text-lg font-semibold mb-4 flex items-center">
                             <i data-lucide="trending-down" class="h-5 w-5 mr-2 text-chart-4"></i>
-                            Egresos Recientes
+                            {{__('recent_expenses')}}
                         </h3>
                         <div class="space-y-4">
                             <div class="flex items-center justify-between">
@@ -117,7 +117,7 @@
                                 </div>
                                 <div class="text-chart-4 font-semibold">-$2,000.00</div>
                             </div>
-                            <div class="flex items-center justify-between">
+                            {{-- <div class="flex items-center justify-between">
                                 <div>
                                     <p class="font-medium">Suministros</p>
                                     <p class="text-sm text-muted-foreground">2024-01-14</p>
@@ -130,10 +130,10 @@
                                     <p class="text-sm text-muted-foreground">2024-01-13</p>
                                 </div>
                                 <div class="text-chart-4 font-semibold">-$450.00</div>
-                            </div>
+                            </div> --}}
                         </div>
                         <button onclick="showSection('egresos')" class="w-full mt-4 px-4 py-2 border border-gray-300 hover:bg-gray-50 rounded-md">
-                            Ver todos los egresos
+                            {{__('view_all_expenses')}}
                         </button>
                     </div>
                 </div>
