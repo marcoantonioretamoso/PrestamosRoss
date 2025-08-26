@@ -21,8 +21,11 @@ class AuthController extends Controller
         }
 
         return back()->withErrors([
-            'email' => 'Las credenciales proporcionadas no son correctas.',
+            'email' => __('invalid_credentials'),
         ])->onlyInput('email');
+        // return back()->withErrors([
+        //     'email' => 'Las credenciales proporcionadas no son correctas.',
+        // ])->onlyInput('email');
     }
     public function logout(Request $request)
     {

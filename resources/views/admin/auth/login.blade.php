@@ -29,8 +29,8 @@
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1"></path>
                 </svg>
             </div>
-            <h2 class="text-3xl font-bold text-gray-900">Sistema Financiero</h2>
-            <p class="mt-2 text-sm text-gray-600">Ingresa a tu cuenta para continuar</p>
+            <h2 class="text-3xl font-bold text-gray-900">{{ __('welcome') }} </h2>
+            <p class="mt-2 text-sm text-gray-600">{{ __('Sign in to your account to continue') }}</p>
         </div>
         
         <form class="mt-8 space-y-6" action="{{ route('admin.login') }}" method="POST">
@@ -38,7 +38,7 @@
             <div class="space-y-4">
                 <div>
                     <label for="email" class="block text-sm font-medium text-gray-700 mb-1">
-                        Correo Electrónico
+                        {{ __('login_email') }}
                     </label>
                     <input id="email" name="email" type="email" required 
                            class="w-full px-3 py-2 border border-gray-300 rounded-lg shadow-sm placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary"
@@ -47,7 +47,7 @@
                 
                 <div>
                     <label for="password" class="block text-sm font-medium text-gray-700 mb-1">
-                        Contraseña
+                        {{ __('login_password') }}
                     </label>
                     <input id="password" name="password" type="password" required 
                            class="w-full px-3 py-2 border border-gray-300 rounded-lg shadow-sm placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary"
@@ -60,12 +60,12 @@
                     <input id="remember-me" name="remember-me" type="checkbox" 
                            class="h-4 w-4 text-primary focus:ring-primary border-gray-300 rounded">
                     <label for="remember-me" class="ml-2 block text-sm text-gray-700">
-                        Recordarme
+                        {{ __('login_remember') }}
                     </label>
                 </div>
                 <div class="text-sm">
                     <a href="#" class="font-medium text-primary hover:text-blue-500">
-                        ¿Olvidaste tu contraseña?
+                        {{ __('login_forgot_password') }}
                     </a>
                 </div>
             </div>
@@ -78,15 +78,9 @@
             <div>
                 <button type="submit" 
                         class="group relative w-full flex justify-center py-3 px-4 border border-transparent text-sm font-medium rounded-lg text-white bg-primary hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary transition-colors duration-200">
-                    Iniciar Sesión
+                    {{ __('login_submit') }}
                 </button>
             </div>
-            
-            {{-- <div class="text-center">
-                <p class="text-xs text-gray-500">
-                    Credenciales de prueba: admin@sistema.com / admin123
-                </p>
-            </div> --}}
         </form>
     </div>
 </body>

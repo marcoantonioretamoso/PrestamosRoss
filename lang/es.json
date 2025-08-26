@@ -1,0 +1,11 @@
+{
+  "welcome": "Bienvenido al sistema financiero",
+  "Sign in to your account to continue": "Ingresa a tu cuenta para continuar",
+  "login_email": "Correo Electrónico",
+  "login_password": "Contraseña",
+  "login_remember": "Recordarme",
+  "login_forgot_password": "¿Olvidaste tu contraseña?",
+  "login_submit": "Iniciar Sesión",
+  "errors_invalid_credentials": "Credenciales inválidas",
+  "errors_throttle": "Demasiados intentos de inicio de sesión. Por favor, inténtalo de nuevo en :seconds segundos."
+}
